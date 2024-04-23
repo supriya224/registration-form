@@ -92,6 +92,8 @@ const Registration: React.FC = () => {
     }
 
     setErrors(newErrors);
+    console.log(formData);
+
     return valid;
   };
 
