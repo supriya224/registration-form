@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import {  useNavigate } from "react-router-dom";
+// useNavigate
 import MainLayout from "../../../layout/MainLayout";
 
 interface IState {
@@ -23,6 +25,8 @@ const Login: React.FC = () => {
       password: "",
     },
   });
+
+  const navigate = useNavigate();
 
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement>
@@ -72,7 +76,8 @@ const Login: React.FC = () => {
           password: "",
         },
       });
-      alert("login success");
+      // Redirect to the account page after successful login
+      navigate("/account");
     }
   };
 
@@ -83,14 +88,11 @@ const Login: React.FC = () => {
           <h4 className="block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
             Signin to your PopX account
           </h4>
-          <p className="mt-1 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </p>
           <form
             className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96"
             onSubmit={handleSubmit}
           >
-            <div className="mb-4 flex flex-col gap-6">
+            <div className="mb-4 flex flex-col gap-7">
               <div className="relative h-11 w-full min-w-[200px]">
                 <input
                   className={`peer h-full w-full rounded-md border ${
@@ -134,7 +136,7 @@ const Login: React.FC = () => {
               </div>
             </div>
             <button
-              className="mt-6 block w-full select-none rounded-lg bg-indigo-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-indigo-500/20 transition-all hover:shadow-lg hover:shadow-indigo-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+              className="mt-9 block w-full select-none rounded-lg bg-indigo-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-indigo-500/20 transition-all hover:shadow-lg hover:shadow-indigo-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
               type="submit"
               data-ripple-light="true"
             >

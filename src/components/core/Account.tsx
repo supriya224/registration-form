@@ -5,7 +5,7 @@ const Account = () => {
   return (
     <MainLayout>
       <section >
-        <div className="">
+        <div className="container mx-auto w-auto">
           <h4 className="my-4 px-5">Account Setting</h4>
           <div className="bg-gray-200  min-h-screen items-bottom">
             <div className="flex p-5 ">
