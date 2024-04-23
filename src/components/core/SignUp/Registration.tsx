@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import MainLayout from "../../../layout/MainLayout";
-
+// I have create interface for registration 
 interface FormData {
   fullName: string;
   phoneNumber: string;
